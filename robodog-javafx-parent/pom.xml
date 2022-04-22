@@ -15,27 +15,53 @@
   <artifactId>robodog-javafx-parent</artifactId>
   <packaging>pom</packaging>
   <name>robodog-javafx-parent</name>
+
+  <properties>
+    <javafx.version>17.0.2</javafx.version>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-controls</artifactId>
-        <version>17.0.2</version>
+        <version>${javafx.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-swing</artifactId>
+        <version>${javafx.version}</version>
       </dependency>
       <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-graphics</artifactId>
-        <version>17.0.2</version>
+        <version>${javafx.version}</version>
       </dependency>
       <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-base</artifactId>
-        <version>17.0.2</version>
+        <version>${javafx.version}</version>
       </dependency>
       <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-fxml</artifactId>
-        <version>17.0.2</version>
+        <version>${javafx.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cc.chordflower.robodog.javafx</groupId>
+        <artifactId>robodog-javafx-annotations</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cc.chordflower.robodog.javafx</groupId>
+        <artifactId>robodog-javafx-test</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cc.chordflower.robodog.javafx</groupId>
+        <artifactId>robodog-javafx-processor</artifactId>
+        <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

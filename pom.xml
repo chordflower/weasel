@@ -57,44 +57,62 @@
     <maven.compiler.parameter>true</maven.compiler.parameter>
     <maven.compiler.debug>false</maven.compiler.debug>
     <maven.source.includePom>true</maven.source.includePom>
+
+    <oleaster-matcher.version>0.2.0</oleaster-matcher.version>
+    <mockito-junit-jupiter.version>4.3.1</mockito-junit-jupiter.version>
+    <junit-jupiter.version>5.8.2</junit-jupiter.version>
+    <auto-value-annotations.version>1.9</auto-value-annotations.version>
+    <auto-service-annotations.version>1.0.1</auto-service-annotations.version>
+    <javapoet.version>1.13.0</javapoet.version>
+    <javax.inject.version>1</javax.inject.version>
+    <annotations.version>23.0.0</annotations.version>
+    <slf4j-api.version>1.8.0-beta4</slf4j-api.version>
+    <noexception.version>1.7.1</noexception.version>
+    <guava.version>31.0.1-jre</guava.version>
   </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>31.0.1-jre</version>
+        <version>${guava.version}</version>
       </dependency>
       <dependency>
         <groupId>com.machinezoo.noexception</groupId>
         <artifactId>noexception</artifactId>
-        <version>1.7.1</version>
+        <version>${noexception.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.8.0-beta4</version>
+        <version>${slf4j-api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains</groupId>
         <artifactId>annotations</artifactId>
-        <version>23.0.0</version>
+        <version>${annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>javax.inject</groupId>
         <artifactId>javax.inject</artifactId>
-        <version>1</version>
+        <version>${javax.inject.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.squareup</groupId>
+        <artifactId>javapoet</artifactId>
+        <version>${javapoet.version}</version>
       </dependency>
 
       <dependency>
         <groupId>com.google.auto.service</groupId>
         <artifactId>auto-service-annotations</artifactId>
-        <version>1.0.1</version>
+        <version>${auto-service-annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>com.google.auto.value</groupId>
         <artifactId>auto-value-annotations</artifactId>
-        <version>1.9</version>
+        <version>${auto-value-annotations.version}</version>
       </dependency>
 
       <dependency>
@@ -111,25 +129,31 @@
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.8.2</version>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.8.2</version>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
-        <version>4.3.1</version>
+        <version>${mockito-junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>com.mscharhag.oleaster</groupId>
         <artifactId>oleaster-matcher</artifactId>
-        <version>0.2.0</version>
+        <version>${oleaster-matcher.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
