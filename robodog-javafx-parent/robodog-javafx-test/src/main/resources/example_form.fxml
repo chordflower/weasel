@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17">
+  <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+    <Menu mnemonicParsing="false" text="File">
+      <MenuItem id="newMenuItem" mnemonicParsing="false" text="New"/>
+      <SeparatorMenuItem mnemonicParsing="false"/>
+      <MenuItem id="closeMenuItem" mnemonicParsing="false" text="Close"/>
+      <MenuItem id="saveMenuItem" mnemonicParsing="false" text="Save"/>
+      <MenuItem id="saveAsMenuItem" mnemonicParsing="false" text="Save As…"/>
+      <MenuItem id="revertMenuItem" mnemonicParsing="false" text="Revert"/>
+      <SeparatorMenuItem mnemonicParsing="false"/>
+      <MenuItem id="preferencesMenuItem" mnemonicParsing="false" text="Preferences…"/>
+      <SeparatorMenuItem mnemonicParsing="false"/>
+      <MenuItem id="quitMenuItem" mnemonicParsing="false" text="Quit"/>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Edit">
+      <MenuItem id="undoMenuItem" mnemonicParsing="false" text="Undo"/>
+      <MenuItem id="redoMenuItem" mnemonicParsing="false" text="Redo"/>
+      <SeparatorMenuItem mnemonicParsing="false"/>
+      <MenuItem id="cutMenuItem" mnemonicParsing="false" text="Cut"/>
+      <MenuItem id="copyMenuItem" mnemonicParsing="false" text="Copy"/>
+      <MenuItem id="pasteMenuItem" mnemonicParsing="false" text="Paste"/>
+      <MenuItem id="deleteMenuItem" mnemonicParsing="false" text="Delete"/>
+      <SeparatorMenuItem mnemonicParsing="false"/>
+      <MenuItem id="selectAllMenuItem" mnemonicParsing="false" text="Select All"/>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Help">
+      <MenuItem id="aboutMenuItem" mnemonicParsing="false" text="About"/>
+    </Menu>
+  </MenuBar>
+  <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+    <Button id="newAction" mnemonicParsing="false" text="N" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="saveAction" mnemonicParsing="false" text="S" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="closeAction" mnemonicParsing="false" text="C" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="revertAction" mnemonicParsing="false" text="RE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Separator orientation="VERTICAL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="preferencesAction" mnemonicParsing="false" text="P" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="quitAction" mnemonicParsing="false" text="Q" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Separator orientation="VERTICAL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="undoAction" mnemonicParsing="false" text="U" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="redoAction" mnemonicParsing="false" text="R" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Separator orientation="VERTICAL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="cutAction" mnemonicParsing="false" text="N" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="copyAction" mnemonicParsing="false" text="S" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="pasteAction" mnemonicParsing="false" text="C" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="deleteAction" mnemonicParsing="false" text="RE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Separator orientation="VERTICAL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="newRecordAction" mnemonicParsing="false" text="+" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+    <Button id="deleteRecordAction" mnemonicParsing="false" text="-" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+  </ToolBar>
+  <SplitPane dividerPositions="0.25" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+    <ListView id="masterView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0"/>
+    <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+      <padding>
+        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0"/>
+      </padding>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Port"/>
+      <Spinner id="port" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1"/>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Name" GridPane.columnIndex="2"/>
+      <TextField id="name" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3"/>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Description" GridPane.rowIndex="1"/>
+      <TextField id="description" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1"/>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Protocol" GridPane.rowIndex="2"/>
+      <ComboBox id="protocol" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+      <CheckBox id="secure" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Secure" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Creation Date" GridPane.rowIndex="3"/>
+      <TextField id="creationDate" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+      <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Modification Date" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+      <TextField id="modificationDate" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    </GridPane>
+  </SplitPane>
+  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+    <Label id="tooltip" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="This is a hint" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" top="5.0"/>
+      </HBox.margin>
+      <padding>
+        <Insets left="5.0" right="5.0"/>
+      </padding>
+    </Label>
+  </HBox>
+</VBox>

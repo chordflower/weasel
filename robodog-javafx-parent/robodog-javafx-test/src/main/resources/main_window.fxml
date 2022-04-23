@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="mainWindow" prefHeight="790.0" prefWidth="1287.0" xmlns="http://javafx.com/javafx/17">
+   <MenuBar id="menuBar" VBox.vgrow="NEVER">
+      <Menu id="applicationMenu" mnemonicParsing="false" text="Test">
+         <MenuItem id="aboutMenuEntry" mnemonicParsing="false" text="About Test"/>
+         <SeparatorMenuItem id="separator1" mnemonicParsing="false"/>
+         <MenuItem id="preferenceMenuItem" mnemonicParsing="false" text="Preferences...">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="COMMA" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <SeparatorMenuItem id="separator2" mnemonicParsing="false"/>
+         <MenuItem id="servicesMenuItem" mnemonicParsing="false" text="Services"/>
+         <SeparatorMenuItem id="separator3" mnemonicParsing="false"/>
+         <MenuItem id="hideMenuEntry" mnemonicParsing="false" text="Hide Test">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="H" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="hideOthersMenuEntry" mnemonicParsing="false" text="Hide Others">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="H" control="UP" meta="UP" shift="DOWN" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="showAllMenuEntry" mnemonicParsing="false" text="Show All"/>
+         <SeparatorMenuItem id="separator4" mnemonicParsing="false"/>
+         <MenuItem id="quitMenuEntry" mnemonicParsing="false" text="Quit Barbara">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="Q" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+      </Menu>
+      <Menu id="fileMenu" mnemonicParsing="false" text="File">
+         <MenuItem id="newMenuEntry" mnemonicParsing="false" text="New…">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <SeparatorMenuItem id="separator5" mnemonicParsing="false"/>
+         <MenuItem id="closeMenuEntry" mnemonicParsing="false" text="Close">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="W" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="closeTabMenuEntry" mnemonicParsing="false" text="Close Tab">
+            <accelerator>
+               <KeyCodeCombination alt="DOWN" code="W" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <SeparatorMenuItem id="separator6" mnemonicParsing="false"/>
+         <MenuItem id="exportAsMenuEntry" mnemonicParsing="false" text="Export As..."/>
+         <SeparatorMenuItem id="separator7" mnemonicParsing="false"/>
+         <MenuItem id="pageSetupMenuEntry" mnemonicParsing="false" text="Page Setup...">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="P" control="UP" meta="UP" shift="DOWN" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="printMenuEntry" mnemonicParsing="false" text="Print...">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="P" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+      </Menu>
+      <Menu id="editMenu" mnemonicParsing="false" text="Edit">
+         <MenuItem id="undoMenuEntry" mnemonicParsing="false" text="Undo">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="Z" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="redoMenuEntry" mnemonicParsing="false" text="Redo">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="Z" control="UP" meta="UP" shift="DOWN" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <SeparatorMenuItem id="separator8" mnemonicParsing="false"/>
+         <MenuItem id="cutMenuEntry" mnemonicParsing="false" text="Cut">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="X" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="copyMenuEntry" mnemonicParsing="false" text="Copy">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="pasteMenuEntry" mnemonicParsing="false" text="Paste">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="V" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="deleteMenuEntry" mnemonicParsing="false" text="Delete">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="DELETE" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <MenuItem id="selectAllMenuEntry" mnemonicParsing="false" text="Select All">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="A" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+            </accelerator>
+         </MenuItem>
+         <SeparatorMenuItem id="separator9" mnemonicParsing="false"/>
+         <Menu id="findMenuEntry" mnemonicParsing="false" text="Find">
+            <MenuItem id="findMenuOption" mnemonicParsing="false" text="Find">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="F" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+               </accelerator>
+            </MenuItem>
+            <MenuItem id="findReplaceMenuEntry" mnemonicParsing="false" text="Find and Replace…">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="F" control="UP" meta="UP" shift="DOWN" shortcut="DOWN"/>
+               </accelerator>
+            </MenuItem>
+            <MenuItem id="findNextMenuEntry" mnemonicParsing="false" text="Find Next">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="G" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
+               </accelerator>
+            </MenuItem>
+            <MenuItem id="findPreviousMenuEntry" mnemonicParsing="false" text="Find Previous">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="G" control="UP" meta="UP" shift="DOWN" shortcut="DOWN"/>
+               </accelerator>
+            </MenuItem>
+         </Menu>
+      </Menu>
+      <Menu id="viewMenu" mnemonicParsing="false" text="View">
+         <MenuItem id="showHideToolbarMenuEntry" mnemonicParsing="false" text="Show/Hide Toolbar"/>
+         <SeparatorMenuItem id="separator10" mnemonicParsing="false"/>
+         <MenuItem id="customizeToolbarMenuEntry" mnemonicParsing="false" text="Customize Toolbar..."/>
+         <SeparatorMenuItem id="separator11" mnemonicParsing="false"/>
+         <MenuItem id="enterExitFullScreenMenuEntry" mnemonicParsing="false" text="Enter/Exit Full Screen"/>
+      </Menu>
+      <Menu id="helpMenu" mnemonicParsing="false" text="Help">
+         <MenuItem id="helpMenuEntry" mnemonicParsing="false" text="Test Help"/>
+      </Menu>
+   </MenuBar>
+   <ToolBar id="toolbar" prefHeight="40.0" prefWidth="200.0">
+      <Button mnemonicParsing="false" text="Button"/>
+   </ToolBar>
+   <SplitPane id="centerPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <TreeView id="sidebar" prefHeight="689.0" prefWidth="280.0"/>
+   </SplitPane>
+   <HBox id="statusBar" prefHeight="32.0" prefWidth="200.0" VBox.vgrow="NEVER"/>
+</VBox>
