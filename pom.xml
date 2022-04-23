@@ -1,38 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright 2022 carddamom
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>cc.chordflower.robodog</groupId>
-  <artifactId>robodog-parent</artifactId>
-  <version>0.1.0</version>
+  <groupId>cc.chordflower.weasel</groupId>
+  <artifactId>weasel-parent</artifactId>
+  <version>0.2.0</version>
   <packaging>pom</packaging>
-  <name>robodog-parent</name>
+  <name>weasel-parent</name>
   <modules>
-    <module>robodog-javafx-parent</module>
-    <module>robodog-utils</module>
+    <module>weasel-javafx-parent</module>
+    <module>weasel-utils</module>
   </modules>
   <description>A series of useful annotation processors</description>
-  <url>https://chordflower.github.io/robodog</url>
+  <url>https://chordflower.github.io/weasel</url>
   <inceptionYear>2022</inceptionYear>
   <licenses>
     <license>
       <name>Apache-2.0</name>
-      <url>https://github.com/chordflower/robodog/blob/develop/LICENSE-2.0.txt</url>
+      <url>https://github.com/chordflower/weasel/blob/develop/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
-    <url>https://github.com/chordflower/robodog</url>
-    <connection>scm:git:https://github.com/chordflower/robodog.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:chordflower/robodog.git</developerConnection>
+    <url>https://github.com/chordflower/weasel</url>
+    <connection>scm:git:https://github.com/chordflower/weasel.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:chordflower/weasel.git</developerConnection>
     <tag>develop</tag>
   </scm>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/chordflower/robodog/issues</url>
+    <url>https://github.com/chordflower/weasel/issues</url>
   </issueManagement>
   <ciManagement>
     <system>github actions</system>
-    <url>https://github.com/chordflower/robodog/actions</url>
+    <url>https://github.com/chordflower/weasel/actions</url>
   </ciManagement>
   <developers>
     <developer>
@@ -57,79 +74,103 @@
     <maven.compiler.parameter>true</maven.compiler.parameter>
     <maven.compiler.debug>false</maven.compiler.debug>
     <maven.source.includePom>true</maven.source.includePom>
+
+    <oleaster-matcher.version>0.2.0</oleaster-matcher.version>
+    <mockito-junit-jupiter.version>4.3.1</mockito-junit-jupiter.version>
+    <junit-jupiter.version>5.8.2</junit-jupiter.version>
+    <auto-value-annotations.version>1.9</auto-value-annotations.version>
+    <auto-service-annotations.version>1.0.1</auto-service-annotations.version>
+    <javapoet.version>1.13.0</javapoet.version>
+    <javax.inject.version>1</javax.inject.version>
+    <annotations.version>23.0.0</annotations.version>
+    <slf4j-api.version>1.8.0-beta4</slf4j-api.version>
+    <noexception.version>1.7.1</noexception.version>
+    <guava.version>31.0.1-jre</guava.version>
   </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>31.0.1-jre</version>
+        <version>${guava.version}</version>
       </dependency>
       <dependency>
         <groupId>com.machinezoo.noexception</groupId>
         <artifactId>noexception</artifactId>
-        <version>1.7.1</version>
+        <version>${noexception.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.8.0-beta4</version>
+        <version>${slf4j-api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains</groupId>
         <artifactId>annotations</artifactId>
-        <version>23.0.0</version>
+        <version>${annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>javax.inject</groupId>
         <artifactId>javax.inject</artifactId>
-        <version>1</version>
+        <version>${javax.inject.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.squareup</groupId>
+        <artifactId>javapoet</artifactId>
+        <version>${javapoet.version}</version>
       </dependency>
 
       <dependency>
         <groupId>com.google.auto.service</groupId>
         <artifactId>auto-service-annotations</artifactId>
-        <version>1.0.1</version>
+        <version>${auto-service-annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>com.google.auto.value</groupId>
         <artifactId>auto-value-annotations</artifactId>
-        <version>1.9</version>
+        <version>${auto-value-annotations.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>cc.chordflower.robodog</groupId>
-        <artifactId>robodog-javafx-parent</artifactId>
+        <groupId>cc.chordflower.weasel</groupId>
+        <artifactId>weasel-javafx-parent</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>cc.chordflower.robodog</groupId>
-        <artifactId>robodog-utils</artifactId>
+        <groupId>cc.chordflower.weasel</groupId>
+        <artifactId>weasel-utils</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.8.2</version>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.8.2</version>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
-        <version>4.3.1</version>
+        <version>${mockito-junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>com.mscharhag.oleaster</groupId>
         <artifactId>oleaster-matcher</artifactId>
-        <version>0.2.0</version>
+        <version>${oleaster-matcher.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
@@ -369,5 +410,60 @@
     </profile>
 
   </profiles>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-linkcheck-plugin</artifactId>
+        <version>1.2</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>linkcheck</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.2.2</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>ci-management</report>
+              <report>dependencies</report>
+              <report>dependency-convergence</report>
+              <report>dependency-info</report>
+              <report>dependency-management</report>
+              <report>distribution-management</report>
+              <report>index</report>
+              <report>issue-management</report>
+              <report>licenses</report>
+              <report>mailing-lists</report>
+              <report>modules</report>
+              <report>plugin-management</report>
+              <report>plugins</report>
+              <report>scm</report>
+              <report>summary</report>
+              <report>team</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>analyze-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
