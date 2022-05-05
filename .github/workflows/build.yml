@@ -17,9 +17,7 @@ name: build
 jobs:
   build:
     runs-on:
-      - windows-latest
       - ubuntu-latest
-      - macos-latest
     steps:
       - name: Code checkout
         uses: actions/checkout@v2
