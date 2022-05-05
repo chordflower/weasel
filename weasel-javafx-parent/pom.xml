@@ -35,7 +35,7 @@
   <description>This module contains the annotations, processor and tests for the javafx part of weasel.</description>
 
   <properties>
-    <javafx.version>17.0.2</javafx.version>
+    <javafx.version>18.0.1</javafx.version>
   </properties>
 
   <dependencyManagement>
