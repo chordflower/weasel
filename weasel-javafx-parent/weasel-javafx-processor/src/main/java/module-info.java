@@ -1,11 +1,12 @@
-module robodog.javafx.processor {
+open module weasel.javafx.processor {
   requires java.compiler;
   requires org.jetbrains.annotations;
   requires com.google.auto.service;
-  requires robodog.javafx.annotations;
+  requires weasel.javafx.annotations;
   requires com.google.common;
   requires com.squareup.javapoet;
   requires javax.inject;
-  requires robodog.utils;
+  requires weasel.utils;
 
+  exports cc.chordflower.weasel.javafx;
 }

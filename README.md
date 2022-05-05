@@ -49,7 +49,7 @@ And then add the following dependency:
 
 ```xml
 <dependency>
-  <groupId>cc.chordflower.robodog</groupId>
+  <groupId>cc.chordflower.weaselcc.chordflower.weasel</groupId>
   <artifactId>YOUR_WANTED_MODULE</artifactId>
   <version>0.1.0</version>
 </dependency>

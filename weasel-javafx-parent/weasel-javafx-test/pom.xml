@@ -85,9 +85,9 @@
         <configuration>
           <annotationProcessorPaths>
             <path>
-              <groupId>cc.chordflower.robodog.javafx</groupId>
-              <artifactId>robodog-javafx-processor</artifactId>
-              <version>0.1.0</version>
+              <groupId>cc.chordflower.weasel.javafx</groupId>
+              <artifactId>weasel-javafx-processor</artifactId>
+              <version>0.2.0</version>
             </path>
           </annotationProcessorPaths>
         </configuration>

@@ -1,11 +1,11 @@
-open module robodog.javafx.annotations {
+open module weasel.javafx.annotations {
   requires org.jetbrains.annotations;
   requires javafx.graphics;
   requires javafx.controls;
 
-  exports cc.chordflower.robodog.javafx.annotations;
-  exports cc.chordflower.robodog.javafx.runtime;
-  exports cc.chordflower.robodog.javafx.utilities.layouts;
-  exports cc.chordflower.robodog.javafx.utilities.controls;
-  exports cc.chordflower.robodog.javafx.utilities.charts;
+  exports cc.chordflower.weasel.javafx.annotations;
+  exports cc.chordflower.weasel.javafx.runtime;
+  exports cc.chordflower.weasel.javafx.utilities.layouts;
+  exports cc.chordflower.weasel.javafx.utilities.controls;
+  exports cc.chordflower.weasel.javafx.utilities.charts;
 }
