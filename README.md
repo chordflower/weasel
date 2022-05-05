@@ -1,17 +1,16 @@
-[![GitHub license](https://img.shields.io/github/license/chordflower/robodog?color=yellow)](https://github.com/chordflower/robodog/blob/develop/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/chordflower/robodog?color=yellow)](https://github.com/chordflower/robodog/issues)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chordflower/robodog/build/develop?color=yellow)
-![GitHub top language](https://img.shields.io/github/languages/top/chordflower/robodog?color=yellow)
+[![GitHub license](https://img.shields.io/github/license/chordflower/weasel?color=yellow)](https://github.com/chordflower/weasel/blob/develop/LICENSE-2.0.txt)
+[![GitHub issues](https://img.shields.io/github/issues/chordflower/weasel?color=yellow)](https://github.com/chordflower/weasel/issues)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chordflower/weasel/build/develop?color=yellow)
+![GitHub top language](https://img.shields.io/github/languages/top/chordflower/weasel?color=yellow)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/chordflower/weasel?color=yellow)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/chordflower/weasel?color=yellow)
+![GitHub repo size](https://img.shields.io/github/repo-size/chordflower/weasel?color=yellow)
+![GitHub issues](https://img.shields.io/github/issues/chordflower/weasel?color=yellow)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/chordflower/weasel?color=yellow)
 
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/chordflower/robodog?color=yellow)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/chordflower/robodog?color=yellow)
-![GitHub repo size](https://img.shields.io/github/repo-size/chordflower/robodog?color=yellow)
-![GitHub issues](https://img.shields.io/github/issues/chordflower/robodog?color=yellow)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/chordflower/robodog?color=yellow)
+# Weasel
 
-# Robodog
-
-A series of annotation processors.
+A set of java 17+ annotation processors.
 
 ## Features
 
@@ -19,16 +18,13 @@ A series of annotation processors.
 - Generates standalone code;
 - Multiple modules, use what you need;
 
-
 ## Documentation
 
-- [Documentation/Website](https://chordflower.github.io/robodog)
-- [Javadoc](https://chordflower.github.io/robodog/javadoc)
-
+- [Documentation/Website](https://chordflower.github.io/weasel) - TODO
 
 ## Installation
 
-Robodog uses maven as a build system and is written in Java 17 (the latest LTS).
+Weasel uses maven as a build system and is written in Java 17 (the latest LTS).
 
 ### Github Packages
 
@@ -38,7 +34,7 @@ You may use a version published using github packages, by including the followin
 <repository>
   <id>github</id>
   <name>GitHub Apache Maven Packages</name>
-  <url>https://maven.pkg.github.com/chordflower/robodog</url>
+  <url>https://maven.pkg.github.com/chordflower/weasel</url>
   <snapshots>
     <enabled>true</enabled>
   </snapshots>
@@ -49,7 +45,7 @@ And then add the following dependency:
 
 ```xml
 <dependency>
-  <groupId>cc.chordflower.weaselcc.chordflower.weasel</groupId>
+  <groupId>cc.chordflower.weasel</groupId>
   <artifactId>YOUR_WANTED_MODULE</artifactId>
   <version>0.1.0</version>
 </dependency>
