@@ -28,6 +28,11 @@
   <name>weasel-javafx-annotations</name>
   <description>This is a series of annotations for use with JavaFx, that allow one to bind a fxml to a class, and connect properties and events.</description>
 
+  <properties>
+    <openjfx-monocle.version>jdk-12.0.1+2</openjfx-monocle.version>
+    <testfx-junit5.version>4.0.16-alpha</testfx-junit5.version>
+    <javatuples.version>1.2</javatuples.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.jetbrains</groupId>
@@ -59,14 +64,20 @@
     </dependency>
     <dependency>
       <groupId>org.testfx</groupId>
+      <artifactId>openjfx-monocle</artifactId>
+      <version>${openjfx-monocle.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testfx</groupId>
       <artifactId>testfx-junit5</artifactId>
-      <version>4.0.16-alpha</version>
+      <version>${testfx-junit5.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.javatuples</groupId>
       <artifactId>javatuples</artifactId>
-      <version>1.2</version>
+      <version>${javatuples.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -106,7 +117,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <argLine>
-            --add-opens javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
+            --add-opens javafx.graphics/com.sun.javafx.application=ALL-UNNAMED --add-opens javafx.graphics/com.sun.glass.ui=ALL-UNNAMED -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw
           </argLine>
         </configuration>
       </plugin>
