@@ -1,4 +1,4 @@
-[![GitHub license](https://img.shields.io/github/license/chordflower/weasel?color=yellow)](https://github.com/chordflower/weasel/blob/develop/LICENSE-2.0.txt)
+[![GitHub license](https://img.shields.io/github/license/chordflower/weasel?color=yellow)](https://github.com/chordflower/weasel/blob/develop/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/chordflower/weasel?color=yellow)](https://github.com/chordflower/weasel/issues)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chordflower/weasel/build/develop?color=yellow)
 ![GitHub top language](https://img.shields.io/github/languages/top/chordflower/weasel?color=yellow)
