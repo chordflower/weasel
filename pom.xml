@@ -81,7 +81,7 @@
     <maven.source.includePom>true</maven.source.includePom>
 
     <oleaster-matcher.version>0.2.0</oleaster-matcher.version>
-    <mockito-junit-jupiter.version>4.3.1</mockito-junit-jupiter.version>
+    <mockito-junit-jupiter.version>4.5.1</mockito-junit-jupiter.version>
     <junit-jupiter.version>5.8.2</junit-jupiter.version>
     <auto-value-annotations.version>1.9</auto-value-annotations.version>
     <auto-service-annotations.version>1.0.1</auto-service-annotations.version>
