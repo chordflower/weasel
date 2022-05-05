@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="${artifactId}" xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
+  <bannerLeft>
+    <name>Weasel</name>
+    <alt>Weasel Logo</alt>
+    <title>Weasel</title>
+    <src>/images/logo-left.png</src>
+    <href>/index.html</href>
+  </bannerLeft>
+
+  <publishDate position="none"/>
+  <version position="left"/>
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.7</version>
+  </skin>
+  <body>
+    <menu ref="modules" />
+    <menu ref="reports" />
+  </body>
+</project>

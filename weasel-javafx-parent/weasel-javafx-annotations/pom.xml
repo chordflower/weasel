@@ -220,18 +220,6 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-linkcheck-plugin</artifactId>
-        <version>1.2</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>linkcheck</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>3.2.2</version>
         <reportSets>
@@ -275,20 +263,15 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.2</version>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.0</version>
         <reportSets>
           <reportSet>
             <reports>
-              <report>checkstyle</report>
+              <report>javadoc</report>
             </reports>
           </reportSet>
         </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.4.0</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
