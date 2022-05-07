@@ -18,6 +18,11 @@
     <version>1.7</version>
   </skin>
   <body>
+    <menu name="Documentation" title="Documentation">
+      <item name="Introduction" href="introduction.html"/>
+      <item name="Generic Annotations" href="annotations.html"/>
+      <item name="Reflection Utilities" href="reflection.html"/>
+    </menu>
     <menu ref="modules" />
     <menu ref="reports" />
   </body>
