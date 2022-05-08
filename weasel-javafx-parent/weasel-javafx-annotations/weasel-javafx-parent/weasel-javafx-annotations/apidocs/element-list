@@ -1,0 +1,6 @@
+module:weasel.javafx.annotations
+cc.chordflower.weasel.javafx.annotations
+cc.chordflower.weasel.javafx.runtime
+cc.chordflower.weasel.javafx.utilities.charts
+cc.chordflower.weasel.javafx.utilities.controls
+cc.chordflower.weasel.javafx.utilities.layouts

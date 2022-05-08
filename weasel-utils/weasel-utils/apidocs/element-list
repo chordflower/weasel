@@ -1,0 +1,6 @@
+module:weasel.utils
+cc.chordflower.weasel.utils
+cc.chordflower.weasel.utils.annotations
+cc.chordflower.weasel.utils.reflection
+cc.chordflower.weasel.utils.reflection.mirror
+cc.chordflower.weasel.utils.reflection.runtime
