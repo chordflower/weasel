@@ -18,6 +18,11 @@
     <version>1.7</version>
   </skin>
   <body>
+    <menu name="Documentation" title="Documentation">
+      <item name="Introduction" href="introduction.html"/>
+      <item name="Utilities" href="utilities.html"/>
+      <item name="Processor" href="processor.html"/>
+    </menu>
     <menu ref="modules" />
     <menu ref="reports" />
   </body>
