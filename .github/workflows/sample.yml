@@ -1,8 +1,6 @@
-name: release
-
+name: release me
 on:
-  repository_dispatch:
-
+  workflow_dispatch:
 permissions:
   checks: write
   pages: write
