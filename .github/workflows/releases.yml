@@ -1,6 +1,5 @@
 name: release
-'on':
-  repository_dispatch: {}
+on: repository_dispatch
 permissions:
   checks: write
   pages: write
