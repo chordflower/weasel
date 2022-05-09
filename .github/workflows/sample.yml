@@ -7,7 +7,7 @@ permissions:
   packages: write
   deployments: write
   contents: write
-  id-token: read
+  'id-token': read
   issues: read
   pull-requests: read
   security-events: write
