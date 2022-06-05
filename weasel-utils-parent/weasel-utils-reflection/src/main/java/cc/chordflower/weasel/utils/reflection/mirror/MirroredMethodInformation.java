@@ -161,6 +161,11 @@ public class MirroredMethodInformation<R> extends MethodInformation< R > {
     return this.returnType;
   }
 
+  @AvailableSince( "0.3.0" )
+  public ExecutableElement Method( ) {
+    return method;
+  }
+
   @Contract( value = "null -> false", pure = true )
   @Override
   public boolean equals( Object o ) {

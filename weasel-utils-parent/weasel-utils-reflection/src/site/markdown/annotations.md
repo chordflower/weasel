@@ -5,7 +5,7 @@ find out the specific type of the generic.
 For example in types:
 
 ~~~java
-import cc.chordflower.weasel.utils.annotations.GenericParameter;
+import cc.chordflower.weasel.utils.reflection.annotations.GenericParameter;
 
 @GenericParameter( String.class )
 public class Example extends Optional< String > {
@@ -16,7 +16,7 @@ public class Example extends Optional< String > {
 Or in fields:
 
 ~~~java
-import cc.chordflower.weasel.utils.annotations.GenericParameter;
+import cc.chordflower.weasel.utils.reflection.annotations.GenericParameter;
 
 public class Example {
 
@@ -30,7 +30,7 @@ Or in method parameters:
 
 ~~~java
 
-import cc.chordflower.weasel.utils.annotations.GenericParameter;
+import cc.chordflower.weasel.utils.reflection.annotations.GenericParameter;
 
 public class Example {
 
@@ -45,7 +45,7 @@ Or in methods, to indicate the generic return type:
 
 ~~~java
 
-import cc.chordflower.weasel.utils.annotations.GenericParameter;
+import cc.chordflower.weasel.utils.reflection.annotations.GenericParameter;
 
 import java.util.List;
 

@@ -129,6 +129,10 @@ public class RuntimeFieldInformation<F> extends FieldInformation<F> {
     return ExceptionUtils.convertToTry( () -> (F)this.field.get( obj ) );
   }
 
+  public Field Field( ) {
+    return field;
+  }
+
   @Contract( value = "null -> false", pure = true )
   @Override
   public boolean equals( Object o ) {

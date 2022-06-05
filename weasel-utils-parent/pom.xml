@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
   ~ Copyright 2022 carddamom
   ~
@@ -16,7 +15,8 @@
   ~
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>weasel-parent</artifactId>
@@ -24,50 +24,14 @@
     <version>0.2.0</version>
   </parent>
   <modules>
-    <module>weasel-javafx-runtime</module>
-    <module>weasel-javafx-processor</module>
-    <module>weasel-javafx-test</module>
+    <module>weasel-utils-reflection</module>
   </modules>
-  <groupId>cc.chordflower.weasel.javafx</groupId>
-  <artifactId>weasel-javafx-parent</artifactId>
+  <groupId>cc.chordflower.weasel.utils</groupId>
+  <artifactId>weasel-utils-parent</artifactId>
   <packaging>pom</packaging>
-  <name>weasel-javafx-parent</name>
-  <description>This module contains the runtime, processor and tests for the javafx part of weasel.</description>
+  <name>weasel-utils-parent</name>
+  <description>This module is a parent for some utilities used by weasel</description>
 
-  <properties>
-    <javafx.version>18.0.1</javafx.version>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-controls</artifactId>
-        <version>${javafx.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-swing</artifactId>
-        <version>${javafx.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-graphics</artifactId>
-        <version>${javafx.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-base</artifactId>
-        <version>${javafx.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-fxml</artifactId>
-        <version>${javafx.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-  
   <profiles>
     <profile>
       <id>download-sources-documentation</id>

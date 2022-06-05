@@ -1,4 +1,4 @@
-module weasel.utils {
+module weasel.utils.reflection {
   requires org.jetbrains.annotations;
   requires com.google.common;
   requires java.compiler;

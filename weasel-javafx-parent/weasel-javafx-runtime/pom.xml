@@ -23,10 +23,10 @@
     <groupId>cc.chordflower.weasel.javafx</groupId>
     <version>0.2.0</version>
   </parent>
-  <artifactId>weasel-javafx-annotations</artifactId>
+  <artifactId>weasel-javafx-runtime</artifactId>
   <packaging>jar</packaging>
   <name>weasel-javafx-annotations</name>
-  <description>This is a series of annotations for use with JavaFx, that allow one to bind a fxml to a class, and connect properties and events.</description>
+  <description>This is the runtime for use with JavaFx, that allow one to bind a fxml to a class, and connect properties and events.</description>
 
   <properties>
     <openjfx-monocle.version>jdk-12.0.1+2</openjfx-monocle.version>

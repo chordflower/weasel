@@ -1,4 +1,4 @@
-open module weasel.javafx.annotations {
+open module weasel.javafx.runtime {
   requires org.jetbrains.annotations;
   requires javafx.graphics;
   requires javafx.controls;

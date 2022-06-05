@@ -54,11 +54,11 @@
 
     <dependency>
       <groupId>cc.chordflower.weasel.javafx</groupId>
-      <artifactId>weasel-javafx-annotations</artifactId>
+      <artifactId>weasel-javafx-runtime</artifactId>
     </dependency>
     <dependency>
-      <groupId>cc.chordflower.weasel</groupId>
-      <artifactId>weasel-utils</artifactId>
+      <groupId>cc.chordflower.weasel.utils</groupId>
+      <artifactId>weasel-utils-reflection</artifactId>
     </dependency>
   </dependencies>
 

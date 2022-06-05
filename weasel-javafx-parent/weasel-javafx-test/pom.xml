@@ -69,7 +69,7 @@
 
     <dependency>
       <groupId>cc.chordflower.weasel.javafx</groupId>
-      <artifactId>weasel-javafx-annotations</artifactId>
+      <artifactId>weasel-javafx-runtime</artifactId>
     </dependency>
   </dependencies>
 
