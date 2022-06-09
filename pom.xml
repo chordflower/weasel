@@ -25,7 +25,7 @@
   <modules>
     <module>weasel-javafx-parent</module>
     <module>weasel-utils-parent</module>
-    <module>weasel-arguments-parent</module>
+    <!-- <module>weasel-arguments-parent</module> -->
   </modules>
   <description>A series of useful annotation processors</description>
   <url>https://chordflower.github.io/weasel</url>
@@ -168,7 +168,7 @@
       </dependency>
 
       <!-- My dependencies -->
-      <dependency>
+      <!-- <dependency>
         <groupId>cc.chordflower.weasel.arguments</groupId>
         <artifactId>weasel-arguments-parent</artifactId>
         <version>${project.version}</version>
@@ -187,7 +187,7 @@
         <groupId>cc.chordflower.weasel.arguments</groupId>
         <artifactId>weasel-arguments-processor</artifactId>
         <version>${project.version}</version>
-      </dependency>
+      </dependency> -->
       <dependency>
         <groupId>cc.chordflower.weasel.javafx</groupId>
         <artifactId>weasel-javafx-parent</artifactId>
