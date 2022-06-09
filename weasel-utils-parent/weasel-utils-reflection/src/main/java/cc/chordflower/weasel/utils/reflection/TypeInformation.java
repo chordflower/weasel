@@ -85,11 +85,10 @@ public abstract class TypeInformation implements IAnnotatedInformation {
   /**
    * Returns the field information for the given field.
    * @param name The name of the field to look for.
-   * @param fieldClass The field class.
    * @param <F> The field type.
    * @return The field information or an empty optional if there is no information.
    */
-  public < F > @NotNull Optional< FieldInformation< F > > FieldInformation( @NotNull String name, @NotNull Class< F > fieldClass ) {
+  public < F > @NotNull Optional< FieldInformation< F > > FieldInformation( @NotNull String name ) {
     return Fields().stream().filter( f -> f.Name().equals( name ) ).map( f -> (FieldInformation<F>)f ).findFirst();
   }
 
@@ -111,11 +110,10 @@ public abstract class TypeInformation implements IAnnotatedInformation {
   /**
    * Returns the method information for the given method name.
    * @param name The name of the method to look for.
-   * @param methodReturnType The method return type.
    * @param <M> The method return type.
    * @return The method information or an empty optional if there is no information.
    */
-  public < M > @NotNull Optional< MethodInformation< M > > MethodInformation( @NotNull String name, @NotNull Class< M > methodReturnType ) {
+  public < M > @NotNull Optional< MethodInformation< M > > MethodInformation( @NotNull String name ) {
     return Methods().stream().filter( m -> m.Name().equals( name ) ).map( m -> ( MethodInformation<M> )m ).findFirst();
   }
 
@@ -143,11 +141,10 @@ public abstract class TypeInformation implements IAnnotatedInformation {
   /**
    * Returns the property information for the given property name.
    * @param name The name of the property to look for.
-   * @param propertyType The property return type.
    * @param <P> The property return type.
    * @return The property information or an empty optional if there is no information.
    */
-  public < P > @NotNull Optional< PropertyInformation< P > > PropertyInformation( @NotNull String name, @NotNull Class< P > propertyType ) {
+  public < P > @NotNull Optional< PropertyInformation< P > > PropertyInformation( @NotNull String name ) {
     return Properties().stream().filter( p -> p.Name().equals( name ) ).map( p -> ( PropertyInformation<P> )p ).findFirst();
   }
 

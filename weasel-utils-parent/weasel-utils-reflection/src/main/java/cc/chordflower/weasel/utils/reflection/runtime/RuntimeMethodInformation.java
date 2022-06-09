@@ -53,7 +53,7 @@ public class RuntimeMethodInformation<R> extends MethodInformation<R> {
     this.modifiers = ReflectionUtils.getSetFromModifiers( method.getModifiers() );
     if( initialized ) {
       this.parameters = Arrays.stream( method.getParameters( ) )
-          .map( p -> new RuntimeParameterInformation<>( p, true, p.getType() ) )
+          .map( p -> new RuntimeParameterInformation<>( p, p.getType() ) )
           .collect( ImmutableSet.toImmutableSet() );
     }
   }
@@ -111,7 +111,7 @@ public class RuntimeMethodInformation<R> extends MethodInformation<R> {
   public @Unmodifiable @NotNull ImmutableSet< ParameterInformation< ? > > Parameters( ) {
     if( this.parameters == null ) {
       this.parameters = Arrays.stream( method.getParameters( ) )
-          .map( p -> new RuntimeParameterInformation<>( p, false, p.getType() ) )
+          .map( p -> new RuntimeParameterInformation<>( p, p.getType() ) )
           .collect( ImmutableSet.toImmutableSet() );
     }
     return this.parameters;

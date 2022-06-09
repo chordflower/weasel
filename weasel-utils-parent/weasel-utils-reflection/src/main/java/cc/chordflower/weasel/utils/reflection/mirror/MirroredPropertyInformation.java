@@ -51,7 +51,7 @@ public class MirroredPropertyInformation<P> extends PropertyInformation<P> {
 
   private final MethodInformation< Void > setter;
 
-  public MirroredPropertyInformation( @NotNull FieldInformation< P > field, MethodInformation< P > getter, MethodInformation< Void > setter, boolean initialized, Class<P> propertyType ) {
+  public MirroredPropertyInformation( @NotNull FieldInformation< P > field, MethodInformation< P > getter, MethodInformation< Void > setter, Class<P> propertyType ) {
     this.name = field.Name();
     this.readOnly = setter == null;
     this.propertyType = propertyType;

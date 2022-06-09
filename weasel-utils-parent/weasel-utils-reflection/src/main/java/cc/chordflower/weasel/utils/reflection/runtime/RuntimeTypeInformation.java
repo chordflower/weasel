@@ -76,7 +76,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
 
       this.fields = Streams.concat( Arrays.stream( type.getDeclaredFields() ), Arrays.stream( type.getFields( ) ) ).distinct()
           .filter( f -> !f.trySetAccessible( ) )
-          .map( f -> new RuntimeFieldInformation<>( f, true, f.getType() ) )
+          .map( f -> new RuntimeFieldInformation<>( f, f.getType() ) )
           .collect( ImmutableSet.toImmutableSet() );
 
       this.methods = Streams.concat( Arrays.stream( type.getDeclaredMethods() ), Arrays.stream( type.getMethods() ) ).distinct()
@@ -101,7 +101,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
             .findFirst();
         if( getter.isPresent( ) ) {
           if( field.Modifiers( ).contains( TypeModifiersEnum.FINAL ) ) {
-            prop.add( new RuntimePropertyInformation( field, getter.get(), null, true, field.FieldType() ) );
+            prop.add( new RuntimePropertyInformation( field, getter.get(), null, field.FieldType() ) );
           } else {
             var setter = this.methods.stream()
                 .filter( m -> m.Name().equals( String.format( "set%s", field.Name() ) ) &&
@@ -110,7 +110,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
                     m.Parameters().size() == 1 &&
                     m.Parameters().stream( ).anyMatch( p -> p.ParameterType().equals( field.FieldType() ) ) )
                 .findFirst();
-            setter.ifPresent( sett -> prop.add( new RuntimePropertyInformation( field, getter.get( ), sett, true, field.FieldType() ) ) );
+            setter.ifPresent( sett -> prop.add( new RuntimePropertyInformation( field, getter.get( ), sett, field.FieldType() ) ) );
           }
         }
       }
@@ -196,7 +196,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
     if( this.fields == null ) {
       this.fields = Streams.concat( Arrays.stream( type.getDeclaredFields() ), Arrays.stream( type.getFields( ) ) ).distinct()
           .filter( f -> !f.trySetAccessible( ) )
-          .map( f -> new RuntimeFieldInformation<>( f, false, f.getType() ) )
+          .map( f -> new RuntimeFieldInformation<>( f, f.getType() ) )
           .collect( ImmutableSet.toImmutableSet() );
     }
     return this.fields;
@@ -249,7 +249,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
             .findFirst();
         if( getter.isPresent( ) ) {
           if( field.Modifiers( ).contains( TypeModifiersEnum.FINAL ) ) {
-            prop.add( new RuntimePropertyInformation( field, getter.get(), null, true, field.FieldType() ) );
+            prop.add( new RuntimePropertyInformation( field, getter.get(), null, field.FieldType() ) );
           } else {
             var setter = this.Methods().stream()
                 .filter( m -> m.Name().equals( String.format( "set%s", field.Name() ) ) &&
@@ -258,7 +258,7 @@ public class RuntimeTypeInformation< T > extends TypeInformation {
                     m.Parameters().size() == 1 &&
                     m.Parameters().stream( ).anyMatch( p -> p.ParameterType().equals( field.FieldType() ) ) )
                 .findFirst();
-            setter.ifPresent( sett -> prop.add( new RuntimePropertyInformation( field, getter.get( ), sett, true, field.FieldType() ) ) );
+            setter.ifPresent( sett -> prop.add( new RuntimePropertyInformation( field, getter.get( ), sett, field.FieldType() ) ) );
           }
         }
       }

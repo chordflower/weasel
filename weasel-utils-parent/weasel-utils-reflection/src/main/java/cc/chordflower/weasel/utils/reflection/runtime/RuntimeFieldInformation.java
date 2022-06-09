@@ -55,7 +55,7 @@ public class RuntimeFieldInformation<F> extends FieldInformation<F> {
 
   private final ImmutableSet< TypeModifiersEnum > modifiers;
 
-  public RuntimeFieldInformation( @NotNull Field field, boolean initialized, Class<F> fieldType ) {
+  public RuntimeFieldInformation( @NotNull Field field, Class<F> fieldType ) {
     this.field = field;
     this.fieldType = fieldType;
     this.annotations = Arrays.stream( field.getAnnotations( ) ).collect( ImmutableMultiset.toImmutableMultiset() );

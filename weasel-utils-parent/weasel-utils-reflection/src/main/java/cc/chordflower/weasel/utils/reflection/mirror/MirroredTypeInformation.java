@@ -113,7 +113,7 @@ public class MirroredTypeInformation extends TypeInformation {
             .findFirst();
         if( getter.isPresent( ) ) {
           if( field.Modifiers( ).contains( TypeModifiersEnum.FINAL ) ) {
-            prop.add( new MirroredPropertyInformation( field, getter.get(), null, true, field.FieldType() ) );
+            prop.add( new MirroredPropertyInformation( field, getter.get(), null, field.FieldType() ) );
           } else {
             var setter = this.methods.stream()
                 .filter( m -> m.Name().equals( String.format( "set%s", field.Name() ) ) &&
@@ -122,7 +122,7 @@ public class MirroredTypeInformation extends TypeInformation {
                     m.Parameters().size() == 1 &&
                     m.Parameters().stream( ).anyMatch( p -> p.ParameterType().equals( field.FieldType() ) ) )
                 .findFirst();
-            setter.ifPresent( sett -> prop.add( new MirroredPropertyInformation( field, getter.get( ), sett, true, field.FieldType() ) ) );
+            setter.ifPresent( sett -> prop.add( new MirroredPropertyInformation( field, getter.get( ), sett, field.FieldType() ) ) );
           }
         }
       }
@@ -271,7 +271,7 @@ public class MirroredTypeInformation extends TypeInformation {
             .findFirst();
         if( getter.isPresent( ) ) {
           if( field.Modifiers( ).contains( TypeModifiersEnum.FINAL ) ) {
-            prop.add( new MirroredPropertyInformation( field, getter.get(), null, true, field.FieldType() ) );
+            prop.add( new MirroredPropertyInformation( field, getter.get(), null, field.FieldType() ) );
           } else {
             var setter = this.Methods().stream()
                 .filter( m -> m.Name().equals( String.format( "set%s", field.Name() ) ) &&
@@ -280,7 +280,7 @@ public class MirroredTypeInformation extends TypeInformation {
                     m.Parameters().size() == 1 &&
                     m.Parameters().stream( ).anyMatch( p -> p.ParameterType().equals( field.FieldType() ) ) )
                 .findFirst();
-            setter.ifPresent( sett -> prop.add( new MirroredPropertyInformation( field, getter.get( ), sett, true, field.FieldType() ) ) );
+            setter.ifPresent( sett -> prop.add( new MirroredPropertyInformation( field, getter.get( ), sett, field.FieldType() ) ) );
           }
         }
       }

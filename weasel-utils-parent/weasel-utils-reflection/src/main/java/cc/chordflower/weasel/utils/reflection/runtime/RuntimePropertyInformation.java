@@ -41,7 +41,7 @@ public class RuntimePropertyInformation<P> extends PropertyInformation<P> {
 
   private boolean readOnly;
 
-  public RuntimePropertyInformation( FieldInformation<P> field, MethodInformation<P> getter, MethodInformation<Void> setter, boolean initialized, Class<P> propertyType ) {
+  public RuntimePropertyInformation( FieldInformation<P> field, MethodInformation<P> getter, MethodInformation<Void> setter, Class<P> propertyType ) {
     this.name = field.Name();
     this.field = field;
     this.getter = getter;

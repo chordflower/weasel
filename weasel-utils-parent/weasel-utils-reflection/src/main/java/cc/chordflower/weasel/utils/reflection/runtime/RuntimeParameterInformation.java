@@ -37,7 +37,7 @@ public class RuntimeParameterInformation<P> extends ParameterInformation<P> {
 
   private final ImmutableMultiset< Annotation > annotations;
 
-  public RuntimeParameterInformation( Parameter parameter, boolean initialized, Class<P> parameterType ) {
+  public RuntimeParameterInformation( Parameter parameter, Class<P> parameterType ) {
     this.parameter = parameter;
     this.parameterType = parameterType;
     this.name = parameter.getName();
