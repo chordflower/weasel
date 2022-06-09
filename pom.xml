@@ -90,7 +90,7 @@
     <javax.inject.version>1</javax.inject.version>
     <annotations.version>23.0.0</annotations.version>
     <slf4j-api.version>1.8.0-beta4</slf4j-api.version>
-    <noexception.version>1.7.1</noexception.version>
+    <noexception.version>1.8.0</noexception.version>
     <guava.version>31.1-jre</guava.version>
   </properties>
 
